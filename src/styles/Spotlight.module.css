@@ -1,0 +1,8 @@
+.divEffect {
+  /* relative w-full h-32 overflow-hidden rounded-lg bg-black */
+  position: relative;
+  width: 100;
+  height: 32;
+  overflow: hidden;
+  /* background: black; */
+}
