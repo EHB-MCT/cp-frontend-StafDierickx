@@ -41,7 +41,7 @@ button {
   font-size: 1em;
   background-color: #ffffff;
   cursor: pointer;
-  filter: drop-shadow(2px 4px 0px);
+  filter: drop-shadow(3px 4px 0px);
 }
 
 
