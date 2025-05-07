@@ -6,8 +6,12 @@ import logo from "../assets/logo.svg";
 import SearchBar from "./Searchbar.jsx";
 
 const Footer = () => {
+  const scrollToFooter = () => {
+    
+  }
+
   return (
-    <header className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={styles.couldsBackground} />
       <div className={styles.content}>
         <img className={styles.logo} src={logo} alt="Story Time Logo" />
@@ -23,7 +27,7 @@ const Footer = () => {
         </div>
         {/* <SearchBar/> */}
       </div>
-    </header>
+    </footer>
   );
 };
 
