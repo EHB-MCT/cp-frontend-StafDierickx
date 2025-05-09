@@ -1,26 +1,92 @@
-import * as React from "react";
-import { NavLink } from "react-router";
+import React, { useContext, useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router";
+import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "../styles/Header.module.css";
 import logo from "../assets/logo.svg";
 
 import SearchBar from "./Searchbar.jsx";
+import { BannerExpandContext } from "../context/BannerContext.jsx";
 
-const Header = () => {
+function Header() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { bannerExpand, setBannerExpand } = useContext(BannerExpandContext);
+  
+  // Effect to update banner state based on current route
+  useEffect(() => {
+    // Set expanded banner for home page, collapsed for others
+    const shouldExpandBanner = location.pathname === "/";
+    setBannerExpand(shouldExpandBanner);
+    console.log("yipee")
+  }, [location.pathname, setBannerExpand]);
+
+  const navigationVariants = {
+    expanded: {
+      height: "auto",
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    },
+    collapsed: {
+      height: 0,
+      margin:0,
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut" 
+      }
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.content}>
-        <img className={styles.logo} src={logo} alt="Story Time Logo" />
         <div className={styles.navigation}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <a href="#test">making-of</a>
+          <AnimatePresence mode="wait">
+            {!bannerExpand && 
+              <motion.div
+                key="small-logo"
+                initial="collapsed"
+                animate="expanded"
+                exit="collapsed"
+                variants={navigationVariants}
+              >
+                <img className={styles.logoSmall} src={logo} alt="Story Time Logo" />
+              </motion.div>
+            }
+          </AnimatePresence>
+          <br />
+          <div className={styles.navigationLinks}>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/story">Projects</NavLink>
+            <a href="#test">making-of</a>
+          </div>
         </div>
-        {/* <SearchBar/> */}
+        <AnimatePresence mode="wait">
+          {bannerExpand &&
+            <motion.div
+              key="banner"
+              className={styles.banner}
+              initial="collapsed"
+              animate="expanded"
+              exit="collapsed"
+              variants={navigationVariants}
+            >
+              <div>
+                <img className={styles.logoBig} src={logo} alt="Story Time Logo" />
+                <p>De sprookjes poortaalsite voor alle interactieve sprookjeservaringen</p>
+              </div>
+              <SearchBar/>
+            </motion.div>
+          }
+        </AnimatePresence>
       </div>
       <div className={styles.couldsBackground} />
     </header>
   );
-};
+}
 
 export default Header;
