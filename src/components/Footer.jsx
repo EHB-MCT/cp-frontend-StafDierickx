@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import styles from "../styles/Footer.module.css";
+import styles from "../styles/components/Footer.module.css";
 import logo from "../assets/logo.svg";
 
 import SearchBar from "./Searchbar.jsx";

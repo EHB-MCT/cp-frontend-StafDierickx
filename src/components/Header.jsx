@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 
-import styles from "../styles/Header.module.css";
+import styles from "../styles/components/Header.module.css";
 import logo from "../assets/logo.svg";
 
 import SearchBar from "./Searchbar.jsx";
@@ -18,7 +18,6 @@ function Header() {
     // Set expanded banner for home page, collapsed for others
     const shouldExpandBanner = location.pathname === "/";
     setBannerExpand(shouldExpandBanner);
-    console.log("yipee")
   }, [location.pathname, setBannerExpand]);
 
   const navigationVariants = {
@@ -32,7 +31,7 @@ function Header() {
     },
     collapsed: {
       height: 0,
-      margin:0,
+      // margin:0,
       opacity: 0,
       transition: {
         duration: 0.3,
@@ -62,7 +61,7 @@ function Header() {
           <div className={styles.navigationLinks}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/story">Projects</NavLink>
-            <a href="#test">making-of</a>
+            <NavLink to="/making-of">Making-of</NavLink>
           </div>
         </div>
         <AnimatePresence mode="wait">

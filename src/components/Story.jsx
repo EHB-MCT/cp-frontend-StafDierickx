@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { StrictMode } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import "../styles/Story.css";
+import "../styles/components/Story.css";
 
 import PullUpWords from "./PullUpWords";
 import PullUpText from "./PullUpText";
