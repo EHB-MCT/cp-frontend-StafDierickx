@@ -1,0 +1,88 @@
+.tile {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+
+    width: 315px;
+    height: 315px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 4px solid #000;
+}
+
+.tileGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+}
+.tileGrid .tile {
+    margin: 10px;
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills container while cropping to preserve aspect ratio */
+    display: block;
+    transition: 0.3s;
+}
+
+.tile > div {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    padding: 5px;
+}
+
+.content {
+    box-sizing: border-box;
+    text-align: center;
+
+    padding: 1em;
+    
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
+    filter: drop-shadow(3px 4px 0px);
+    transition: 0.3s;
+}
+
+.tile .title {
+    font-family: Bungee;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.tile p {
+    margin: 0;
+
+    font-family: Geologica;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.tile:hover img {
+    filter: brightness(50%);
+    transition: 0.3s;
+}
+.tile:hover .content {
+    padding: 30px 0px 30px 0px;
+    transition: 0.3s;
+}
