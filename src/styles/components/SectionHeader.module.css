@@ -1,0 +1,19 @@
+.sectionHeader {
+    background-color: #E51131;
+    border: 2px solid #000;
+    border-radius: 0px 6px 6px 0px;
+    display: inline-block;
+    text-align: center;
+    align-self: flex-start;
+
+    margin-top: 5em;
+    margin-bottom: 2em;
+    padding: 12px 95px 12px 95px;
+    /* padding-left: 85px; */
+    /* padding-right: 85px; */
+}
+
+.sectionHeader h1 {
+    margin: 0;
+    color: white;
+}
