@@ -1,0 +1,102 @@
+[
+    {
+        "title": "story1",
+        "image": "https://image1.png",
+        "creator": "john"
+    },
+    {
+        "title": "story2",
+        "image": "https://image2.png",
+        "creator": "alice"
+    },
+    {
+        "title": "story3",
+        "image": "https://image3.png",
+        "creator": "bob"
+    },
+    {
+        "title": "story4",
+        "image": "https://image4.png",
+        "creator": "emma"
+    },
+    {
+        "title": "story5",
+        "image": "https://image5.png",
+        "creator": "mike"
+    },
+    {
+        "title": "story6",
+        "image": "https://image6.png",
+        "creator": "sara"
+    },
+    {
+        "title": "story7",
+        "image": "https://image7.png",
+        "creator": "tom"
+    },
+    {
+        "title": "story8",
+        "image": "https://image8.png",
+        "creator": "lisa"
+    },
+    {
+        "title": "story9",
+        "image": "https://image9.png",
+        "creator": "ryan"
+    },
+    {
+        "title": "story10",
+        "image": "https://image10.png",
+        "creator": "nina"
+    },
+    {
+        "title": "story11",
+        "image": "https://image11.png",
+        "creator": "dan"
+    },
+    {
+        "title": "story12",
+        "image": "https://image12.png",
+        "creator": "zoe"
+    },
+    {
+        "title": "story13",
+        "image": "https://image13.png",
+        "creator": "kevin"
+    },
+    {
+        "title": "story14",
+        "image": "https://image14.png",
+        "creator": "chloe"
+    },
+    {
+        "title": "story15",
+        "image": "https://image15.png",
+        "creator": "sam"
+    },
+    {
+        "title": "story16",
+        "image": "https://image16.png",
+        "creator": "mia"
+    },
+    {
+        "title": "story17",
+        "image": "https://image17.png",
+        "creator": "jake"
+    },
+    {
+        "title": "story18",
+        "image": "https://image18.png",
+        "creator": "olivia"
+    },
+    {
+        "title": "story19",
+        "image": "https://image19.png",
+        "creator": "liam"
+    },
+    {
+        "title": "story20",
+        "image": "https://image20.png",
+        "creator": "ava"
+    }
+]
