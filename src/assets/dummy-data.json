@@ -2,101 +2,121 @@
     {
         "title": "story1",
         "image": "https://image1.png",
-        "creator": "john"
+        "creator": "john",
+        "url": "/story"
     },
     {
         "title": "story2",
         "image": "https://image2.png",
-        "creator": "alice"
+        "creator": "alice",
+        "url": "/story"
     },
     {
         "title": "story3",
         "image": "https://image3.png",
-        "creator": "bob"
+        "creator": "bob",
+        "url": "/story"
     },
     {
         "title": "story4",
         "image": "https://image4.png",
-        "creator": "emma"
+        "creator": "emma",
+        "url": "/story"
     },
     {
         "title": "story5",
         "image": "https://image5.png",
-        "creator": "mike"
+        "creator": "mike",
+        "url": "/story"
     },
     {
         "title": "story6",
         "image": "https://image6.png",
-        "creator": "sara"
+        "creator": "sara",
+        "url": "/story"
     },
     {
         "title": "story7",
         "image": "https://image7.png",
-        "creator": "tom"
+        "creator": "tom",
+        "url": "/story"
     },
     {
         "title": "story8",
         "image": "https://image8.png",
-        "creator": "lisa"
+        "creator": "lisa",
+        "url": "/story"
     },
     {
         "title": "story9",
         "image": "https://image9.png",
-        "creator": "ryan"
+        "creator": "ryan",
+        "url": "/story"
     },
     {
         "title": "story10",
         "image": "https://image10.png",
-        "creator": "nina"
+        "creator": "nina",
+        "url": "/story"
     },
     {
         "title": "story11",
         "image": "https://image11.png",
-        "creator": "dan"
+        "creator": "dan",
+        "url": "/story"
     },
     {
         "title": "story12",
         "image": "https://image12.png",
-        "creator": "zoe"
+        "creator": "zoe",
+        "url": "/story"
     },
     {
         "title": "story13",
         "image": "https://image13.png",
-        "creator": "kevin"
+        "creator": "kevin",
+        "url": "/story"
     },
     {
         "title": "story14",
         "image": "https://image14.png",
-        "creator": "chloe"
+        "creator": "chloe",
+        "url": "/story"
     },
     {
         "title": "story15",
         "image": "https://image15.png",
-        "creator": "sam"
+        "creator": "sam",
+        "url": "/story"
     },
     {
         "title": "story16",
         "image": "https://image16.png",
-        "creator": "mia"
+        "creator": "mia",
+        "url": "/story"
     },
     {
         "title": "story17",
         "image": "https://image17.png",
-        "creator": "jake"
+        "creator": "jake",
+        "url": "/story"
     },
     {
         "title": "story18",
         "image": "https://image18.png",
-        "creator": "olivia"
+        "creator": "olivia",
+        "url": "/story"
     },
     {
         "title": "story19",
         "image": "https://image19.png",
-        "creator": "liam"
+        "creator": "liam",
+        "url": "/story"
     },
     {
         "title": "story20",
         "image": "https://image20.png",
-        "creator": "ava"
+        "creator": "ava",
+        "url": "/story"
     }
 ]
