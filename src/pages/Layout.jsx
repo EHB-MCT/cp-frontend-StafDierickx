@@ -8,7 +8,9 @@ function Layout({children}) {
     return (
         <>
             <Header />
-                <Outlet />
+                <div className="center-body">
+                    <Outlet />
+                </div>
             <Footer />
         </>
     )

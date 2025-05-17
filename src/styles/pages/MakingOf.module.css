@@ -1,0 +1,72 @@
+.makingOf {
+    border: 4px solid #000;
+    border-radius: 10px;
+    position: relative;
+    width: 1195px;
+}
+
+.bannerImg {
+    position: relative;
+    border: 3px solid #000;
+    border-radius: 10px;
+}
+.bannerImg > img {
+    width: 100%;
+    height: 472px;
+    object-fit: cover;   /* fills container while cropping to preserve aspect ratio */
+    display: block;
+}
+
+.bannerImg > div {
+    padding: 20px;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+}
+.bannerImg > div > div {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #EBF5EC;
+    /* box-sizing: border-box; */
+    /* width: 100%; */
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.bannerImg .storyTitle {
+    font-family: Geologica;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0%;
+}
+.bannerImg .creator {
+    font-family: Geologica;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0%;
+    text-align: right;
+}
+
+.makingOf > *:not(:first-child) {
+    border: 1px solid #000;
+    margin: 3em;
+}
+
+.makingOf .title {
+    font-family: Geologica;
+    font-weight: 500;
+    size: 22px
+}
+.title::after {
+    content: "muh";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 10px; /* spacing between text and line */
+    height: 2px;
+    background-color: #000;
+    width: calc(100vw - 250px); /* adjust to fit your layout */
+}
