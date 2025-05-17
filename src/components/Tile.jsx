@@ -6,7 +6,7 @@ import { style } from "framer-motion/m";
 
 import img from "../assets/dummy.jpeg"
 
-function Tile({title, creator, image}) {
+function Tile({title, creator, url, image}) {
     const animations = {
         fadeIn: {
             height: "auto",
@@ -28,7 +28,7 @@ function Tile({title, creator, image}) {
     };
 
     return (
-        <div className={Styles.tile}>
+        <div className={Styles.tile} onClick={() => window.location.href = url}>
             <img src={img} alt="" />
             <div>
                 <div className={Styles.content}>
