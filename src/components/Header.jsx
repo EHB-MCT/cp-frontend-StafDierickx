@@ -60,7 +60,7 @@ function Header() {
           <br />
           <div className={styles.navigationLinks}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/story">Projects</NavLink>
+            <NavLink to="/sprookjes">Sprookjes</NavLink>
             <NavLink to="/making-of">Making-of</NavLink>
           </div>
         </div>

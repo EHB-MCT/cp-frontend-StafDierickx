@@ -8,6 +8,7 @@ import BannerProvider from './context/BannerContext.jsx'
 
 import Layout from './pages/Layout.jsx'
 import Home from './pages/Home.jsx'
+import Sprookjes from './pages/Sprookjes.jsx'
 import StoryPage from './pages/StoryPage.jsx'
 import MakingOf from './pages/MakingOf.jsx'
 
@@ -20,6 +21,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route index element={<Home />} />
+                <Route path="sprookjes" element={<Sprookjes />} />
                 <Route path="story" element={<StoryPage />} />
                 <Route path="making-of" element={<MakingOf />} />
               </Route> 
