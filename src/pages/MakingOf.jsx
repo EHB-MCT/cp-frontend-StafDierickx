@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import SectionHeader from "../components/SectionHeader"
-import Styles from "../styles/pages/MakingOf.module.css";
-import dummydata from "../assets/dummy-data.json"
-import img from "../assets/dummy.jpeg"
+import SectionHeader from "@/components/SectionHeader"
+import Styles from "@/styles/pages/MakingOf.module.css";
+import dummydata from "@/assets/dummy-data.json"
+import img from "@/assets/dummy.jpeg"
 
 function MakingOf() {
     const [data, setData] = useState(null);

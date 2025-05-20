@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import styles from "../styles/components/Spotlight.module.css";
+import styles from "@/styles/components/Spotlight.module.css";
 
 const Spotlight = ({src}) => {
   const ref = useRef(null);

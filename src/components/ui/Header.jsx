@@ -2,11 +2,11 @@ import React, { useContext, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 
-import styles from "../styles/components/Header.module.css";
-import logo from "../assets/logo.svg";
+import styles from "@/styles/components/Header.module.css";
+import logo from "@/assets/logo.svg";
 
 import SearchBar from "./Searchbar.jsx";
-import { BannerExpandContext } from "../context/BannerContext.jsx";
+import { BannerExpandContext } from "@/context/BannerContext.jsx";
 
 function Header() {
   const navigate = useNavigate();

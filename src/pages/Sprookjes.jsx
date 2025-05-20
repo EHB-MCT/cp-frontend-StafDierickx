@@ -1,9 +1,9 @@
 import React from "react";
 
-import TileGrid from "../components/TileGrid";
-import SearchBar from "../components/Searchbar";
+import TileGrid from "@/components/ui/TileGrid";
+import SearchBar from "@/components/ui/Searchbar";
 
-import dummydata from "../assets/dummy-data.json"
+import dummydata from "@/assets/dummy-data.json"
 
 function Sprookjes() {
   let storyCards = dummydata

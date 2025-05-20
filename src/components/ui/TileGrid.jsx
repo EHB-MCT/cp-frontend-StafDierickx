@@ -1,12 +1,12 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-import Styles from "../styles/components/Tile.module.css"
+import Styles from "@/styles/components/Tile.module.css"
 import { style } from "framer-motion/m";
 
 import Tile from "./Tile"
 
-import img from "../assets/dummy.jpeg"
+import img from "@/assets/dummy.jpeg"
 
 function TileGrid({data, max = 0}) {
     const animations = {

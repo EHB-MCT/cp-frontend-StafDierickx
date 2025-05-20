@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-import Styles from "../styles/components/Tile.module.css"
+import Styles from "@/styles/components/Tile.module.css"
 import { style } from "framer-motion/m";
 
-import img from "../assets/dummy.jpeg"
+import img from "@/assets/dummy.jpeg"
 
 function Tile({title, creator, url, image}) {
     const animations = {
