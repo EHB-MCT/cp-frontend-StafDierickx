@@ -49,3 +49,87 @@ section {
   padding: 10px;
   background: rgba(0, 128, 0, 1);
 }
+
+.story .panel1 .wizard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-110%, -20%); */
+  width: auto;
+  height: 450px;
+}
+
+.story .panel1 .quest {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: auto;
+}
+
+.story .panel1 .aladin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -20%);
+    height: 450px;
+    width: auto;
+}
+
+.story .panel2 .lamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(90%, -90%);
+    width: 125px;
+    height: auto;
+}
+
+.story .panel2 .aladin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: scalex(-1) translate(50%, -40%);
+    width: 250px;
+    height: auto;
+}
+
+.story .panel3 .aladin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-100%, -40%);
+    height: 650px;
+    width: auto;
+}
+
+.story .panel3 .lamp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    width: 300px;
+    height: auto;
+}
+
+.story .panel4 .aladin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: scalex(-1) translate(50%, -40%);
+    width: 250px;
+    height: auto;
+}
+
+.story .panel5 .aladin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-100%, -40%);
+    height: 650px;
+    width: auto;
+}
