@@ -6,7 +6,7 @@ import { style } from "framer-motion/m";
 
 import img from "@/assets/dummy.jpeg"
 
-function Tile({title, creator, url, image}) {
+function Tile({fairytale, nameStudent, fairytaleLink, imgThumbnail}) {
     const animations = {
         fadeIn: {
             height: "auto",
@@ -28,12 +28,12 @@ function Tile({title, creator, url, image}) {
     };
 
     return (
-        <div className={Styles.tile} onClick={() => window.location.href = url}>
-            <img src={img} alt="" />
+        <div className={Styles.tile} onClick={() => window.location.href = fairytaleLink}>
+            <img src={imgThumbnail} alt="" />
             <div>
                 <div className={Styles.content}>
-                    <p className={Styles.title}>{title}</p>
-                    <p>{creator}</p>
+                    <p className={Styles.title}>{fairytale}</p>
+                    <p>{nameStudent}</p>
                 </div>
             </div>
         </div>

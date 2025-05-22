@@ -5,6 +5,8 @@
 - https://react.dev/reference/react/useEffect
 - https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 - https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one
+- https://claude.ai/share/f9525850-ad1c-4568-b251-32bf9f30d6cf
+- https://www.codingdeft.com/posts/react-get-query-and-url-parameters/
 
 React context
 - https://react.dev/reference/react/createContext
@@ -12,6 +14,8 @@ React context
 
 Framer motion
 - https://motion.dev/docs/react-animate-presence
+- https://examples.motion.dev/js/parallax
+- https://examples.motion.dev/react/keyframes
 
 react routes
 - https://reactrouter.com/start/declarative/routing
