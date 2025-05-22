@@ -28,7 +28,7 @@ function Home({expand = true}) {
       .then(data => {
         console.log("Data fetched:", data)
         
-        setStoryCards([...storyCards].sort(() => Math.random() - 0.5));
+        setStoryCards([...data].sort(() => Math.random() - 0.5));
         setIsLoading(false)
       })
       .catch(error => console.error(error))
