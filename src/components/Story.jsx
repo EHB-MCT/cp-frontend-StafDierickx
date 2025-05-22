@@ -214,7 +214,7 @@ function Story() {
         </div>
       </section>
       <section className="img-container">
-        <div className="img-wrapper">
+        <div className="img-wrapper panel5">
           <img src={bg5} alt="" />
           <div className="text">
             <PullUpWords text="A fierce battle." size={44} />
@@ -222,6 +222,47 @@ function Story() {
             <PullUpText text="He used his powerfull magic to try and get the oil lamp back!" />
             <PullUpText text="Aladin put up a great fight and wasn't going to give the lamp back." />
           </div>
+          <MotionImg 
+            className="aladin" 
+            src={aladin}
+            initial={{
+              x: "50%",
+              y: "-20%"
+            }}
+            animate={{
+              x:[10, -10, 10],
+              y:[0, -10, 0, -10, 0]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <MotionImg 
+            className="wizard" 
+            src={wizard}
+            initial={{
+              x: "-150%",
+              y: "-10%",
+              opacity: 1,
+              boxShadow: "0 0 40px 0px #ffffff"
+            }}
+            animate={{
+              opacity: [1, 0.5, 1],
+              boxShadow: [
+                "0 0 40px 0px #ffffff",
+                "0 0 0px 0px #ffffff",
+                "0 0 40px 0px #ffffff"
+              ]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+
         </div>
       </section>
       <section className="img-container">
