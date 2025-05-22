@@ -7,6 +7,8 @@
 - https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one
 - https://claude.ai/share/f9525850-ad1c-4568-b251-32bf9f30d6cf
 - https://www.codingdeft.com/posts/react-get-query-and-url-parameters/
+- https://www.npmjs.com/package/clsx
+- https://medium.com/@rivaifnasution/how-to-use-clsx-in-react-f1cedb70bfa7
 
 React context
 - https://react.dev/reference/react/createContext
