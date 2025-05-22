@@ -1,4 +1,4 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import * as React from "react";
 
 function PullUpWords({ text, size = 16 }) {

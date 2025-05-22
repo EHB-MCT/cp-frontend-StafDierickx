@@ -1,15 +1,7 @@
-import * as React from "react";
-
 import styles from "@/styles/components/Footer.module.css";
 import logo from "@/assets/logo.svg";
 
-import SearchBar from "./Searchbar.jsx";
-
 const Footer = () => {
-  const scrollToFooter = () => {
-    
-  }
-
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.couldsBackground} />
@@ -25,7 +17,6 @@ const Footer = () => {
           <a href="/">Home</a>
           <a href="/projects">Projects</a>
         </div>
-        {/* <SearchBar/> */}
       </div>
     </footer>
   );

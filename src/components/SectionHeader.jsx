@@ -1,6 +1,5 @@
 import Styles from "@/styles/components/SectionHeader.module.css"
 
-
 const SectionHeader = ({ text }) => {
     return (
         <div className={Styles.sectionHeader}>

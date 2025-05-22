@@ -57,7 +57,7 @@
     text-align: center;
     padding: 0.5em 1em;
     background-color: #ffffff;
-    cursor: pointer;
+    /* cursor: pointer; */
     filter: drop-shadow(3px 4px 0px);
 }
 .active {

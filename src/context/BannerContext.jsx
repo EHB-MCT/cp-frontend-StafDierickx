@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, createContext } from "react";
 
-// Fix the typo: BannderExpandContext -> BannerExpandContext
 export const BannerExpandContext = createContext();
 
 export function BannerProvider({ children }) {

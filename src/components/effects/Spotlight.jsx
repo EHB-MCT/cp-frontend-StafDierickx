@@ -28,7 +28,6 @@ const Spotlight = ({src}) => {
 
   return (
     <>
-      {/* Text spotlight */}
       <motion.div
         ref={ref}
         className={styles.divEffect} //"relative w-full h-32 overflow-hidden rounded-lg bg-black"
@@ -38,7 +37,7 @@ const Spotlight = ({src}) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* Masked text with spotlight effect */}
+          {/* masked text with spotlight effect */}
           <motion.div
             className="text-center"
             style={{
@@ -49,23 +48,6 @@ const Spotlight = ({src}) => {
           </motion.div>
         </div>
       </motion.div>
-      
-      {/* <div
-        ref={divRef}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onMouseMove={handleMouseMove}
-        onFocus={handleFocus}
-        className="spotlight-effect"
-      >
-        <div
-          className="spotlight"
-          style={{
-            opacity,
-            background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.06), transparent 40%)`,
-          }}
-        />
-      </div> */}
     </>
   );
 };

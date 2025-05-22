@@ -1,10 +1,11 @@
-import { useState, useRef } from "react";
 import { StrictMode } from "react";
 import {
   useScroll,
   useSpring,
 } from "framer-motion";
 import "@/styles/components/Story.css";
+
+import { motion } from "framer-motion";
 
 import PullUpWords from "./effects/PullUpWords";
 import PullUpText from "./effects/PullUpText";

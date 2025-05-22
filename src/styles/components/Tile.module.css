@@ -46,13 +46,24 @@
     box-sizing: border-box;
     text-align: center;
 
-    padding: 1em;
-    
+    height: 30px;
     width: 100%;
     background-color: #fff;
     border: 2px solid #000;
     border-radius: 15px;
     filter: drop-shadow(3px 4px 0px);
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.tile .text:not(:first-child) {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.tile:hover .text:not(:first-child) {
+    height: 16px;
+    overflow: hidden;
     transition: 0.3s;
 }
 
@@ -74,8 +85,6 @@
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
-
-    transition: 0.3s;
 }
 
 .tile:hover img {
@@ -83,6 +92,7 @@
     transition: 0.3s;
 }
 .tile:hover .content {
+    height: auto;
     padding: 30px 0px 30px 0px;
     transition: 0.3s;
 }
