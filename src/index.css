@@ -52,7 +52,7 @@ body {
   margin: 0;
   /* display: flex; */
   place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
   min-height: 100vh;
 }
 
@@ -73,18 +73,4 @@ button {
   background-color: #ffffff;
   cursor: pointer;
   filter: drop-shadow(3px 4px 0px);
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

@@ -8,10 +8,10 @@ function MotionImg({ src, className, initial, animate, exit, transition }) {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  if (!initial) initial = { x: 15, opacity: 0 };
-  if (!animate)
-    animate = { x: 0, opacity: 1 };
-  if (!exit) exit = { opacity: 0 };
+  // if (!initial) initial = { x: 15, opacity: 1 };
+  // if (!animate)
+  //   animate = { x: 0, opacity: 1 };
+  // if (!exit) exit = { opacity: 0 };
   if (!transition)
     transition = {duration: 0.5, delay: 0.5}
   return (
@@ -20,7 +20,7 @@ function MotionImg({ src, className, initial, animate, exit, transition }) {
       ref={ref}
       className={className}
       initial={initial}
-      animate= { isInView ? animate : {opacity:0}}
+      animate= { isInView ? animate : {}}
       exit={exit}
       transition={transition}
     />
