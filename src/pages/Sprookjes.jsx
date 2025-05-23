@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import TileGrid from "@/components/ui/TileGrid";
 import SearchBar from "@/components/ui/Searchbar";
+import LoadingElement from "@/components/ui/LoadingElement";
 
 // import dummydata from "@/assets/dummy-data.json"
 
@@ -56,6 +57,11 @@ function Sprookjes() {
     })
     setFilteredStoryCards(cards)
   }
+
+  if (isLoading) 
+    return (
+      <LoadingElement />
+    )
   
   return (
     <>

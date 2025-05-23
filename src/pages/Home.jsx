@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 
 import Header from "@/components/ui/Header.jsx";
 
-import Story from '@/components/Story.jsx';
+import LoadingElement from "@/components/ui/LoadingElement.jsx";
 import SectionHeader from "@/components/SectionHeader.jsx";
 import TileGrid from "@/components/ui/TileGrid.jsx";
 import { BannerExpandContext } from "@/context/BannerContext.jsx";
@@ -33,6 +33,11 @@ function Home({expand = true}) {
       })
       .catch(error => console.error(error))
   }, [])
+
+  if (isLoading)
+    return (
+      <LoadingElement />
+    )
 
   return (
     <>
