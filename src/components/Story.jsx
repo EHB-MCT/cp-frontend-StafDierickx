@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 import PullUpWords from "./effects/PullUpWords";
 import PullUpText from "./effects/PullUpText";
 import Spotlight from "./effects/Spotlight";
+import ScrollFade from "./effects/ScrollFade"
+import Paralax from "./effects/Paralax";
 
 // function TitleAnimation({ text = "Hello World" }) {
 //   const ref = useRef(null);
@@ -49,8 +51,10 @@ import bg3 from "@/assets/story/backgrounds/bg3.png";
 import bg4 from "@/assets/story/backgrounds/bg4.png";
 import bg4_overlay from "@/assets/story/backgrounds/bg4_overlay.png";
 import bg5 from "@/assets/story/backgrounds/bg5.png";
-import bg6 from "@/assets/story/backgrounds/bg6.png";
-// import bg7 from "./assets/story/backgrounds/bg7.png";
+import desertSky from "@/assets/story/backgrounds/desert0.png";
+import desertBg from "@/assets/story/backgrounds/desert1.png";
+import desertSun from "@/assets/story/backgrounds/desert2.png";
+import desertHill from "@/assets/story/backgrounds/desert3.png";
 
 import MotionImg from "./effects/MotionImg";
 
@@ -75,6 +79,7 @@ function Story() {
       </section>
       <br />
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper panel1">
           <img src={bg1} alt="" />
           <div className="text">
@@ -116,8 +121,10 @@ function Story() {
             }}
           />
         </div>
+        </ScrollFade>
       </section>
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper panel2">
           <img src={bg2} alt="" />
           <div className="text">
@@ -144,8 +151,10 @@ function Story() {
             }}
           />
         </div>
+        </ScrollFade>
       </section>
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper panel3">
           <img src={bg3} alt="" />
           <div className="text">
@@ -171,8 +180,10 @@ function Story() {
             }}
           />
         </div>
+        </ScrollFade>
       </section>
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper panel4">
           <img src={bg4} alt="" />
           <MotionImg 
@@ -213,8 +224,10 @@ function Story() {
             }}
           />
         </div>
+        </ScrollFade>
       </section>
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper panel5">
           <img src={bg5} alt="" />
           <div className="text">
@@ -265,10 +278,21 @@ function Story() {
           />
 
         </div>
+        </ScrollFade>
       </section>
       <section className="img-container">
+        <ScrollFade>
         <div className="img-wrapper">
-          <img src={bg6} alt="" />
+          <Paralax offset={0}>
+            <img src={desertSky} />
+          </Paralax>
+          <Paralax offset={-200} zIndex={0}>
+            <img src={desertSun} alt="" />
+          </Paralax>
+          <img src={desertBg} alt="" />
+          <Paralax offset={-100}>
+            <img src={desertHill} alt="" />
+          </Paralax>
           <div className="text">
             <PullUpWords text="A happy ending." size={44} />
             <PullUpText text="Aladin managed to outsmart the sorcerer and won the battle" />
@@ -277,6 +301,7 @@ function Story() {
             <PullUpText text="Everyone got what they wanted." />
           </div>
         </div>
+        </ScrollFade>
       </section>
     </div>
   );
