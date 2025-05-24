@@ -9,6 +9,7 @@
 - https://www.codingdeft.com/posts/react-get-query-and-url-parameters/
 - https://www.npmjs.com/package/clsx
 - https://medium.com/@rivaifnasution/how-to-use-clsx-in-react-f1cedb70bfa7
+- https://chatgpt.com/share/68318528-d5f0-8012-a139-73633e6350fc
 
 React context
 - https://react.dev/reference/react/createContext
@@ -18,6 +19,7 @@ Framer motion
 - https://motion.dev/docs/react-animate-presence
 - https://examples.motion.dev/js/parallax
 - https://examples.motion.dev/react/keyframes
+- https://motion.dev/docs/react-use-scroll#element-position
 
 react routes
 - https://reactrouter.com/start/declarative/routing

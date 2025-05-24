@@ -7,6 +7,12 @@ section {
   margin: 20rem;
 }
 
+.absolte {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .story {
     background: black;
 }
