@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const Paralax = ({children, offset}) => {
+const Paralax = ({children, offset, zIndex = 0}) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -16,9 +16,14 @@ const Paralax = ({children, offset}) => {
             style={{
                 y,
                 position:"absolute",
+                top: 0,
+                left: 0,
+                zIndex: zIndex
             }}
         >
             {children}
         </motion.div>
     );
 }
+
+export default Paralax;
