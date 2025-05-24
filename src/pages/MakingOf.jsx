@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionHeader from "@/components/SectionHeader"
 import Styles from "@/styles/pages/MakingOf.module.css";
+import LoadingElement from "@/components/ui/LoadingElement.jsx";
 import dummydata from "@/assets/dummy-data.json"
 import notFound from "@/assets/img-not-found.png"
 
@@ -14,30 +15,44 @@ const TitleDivider = ({text}) => {
 }
 
 function MakingOf() {
-    const [data, setData] = useState(null);
+    const [storyData, setStoryData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true)
     
     useEffect(() => {
-        console.log("Loading dummy data...");
+        // fetch json array from api
+        console.log("Fetching sprookjes data...")
+        fetch("https://raw.githubusercontent.com/EHB-MCT/cp-frontend-MaximWesterbeek/refs/heads/main/course-project/public/api/fairytaleList.json")
+          .then(response => response.json())
+          .then(data => {
+            console.log("Data fetched:", data)
 
-        // let data = dummydata[0]
-        // data.image = img
+            const storydata = dummydata.find(story => story.id === "staf-dierickx-aladin-en-de-wonderlamp")
+            console.log("Story data:", storydata)
 
-        setData(dummydata[0]);
+            setStoryData(storydata)
+            setIsLoading(false)
+          })
+          .catch(error => console.error(error))
     }, []); // Empty dependency array means this effect runs once on mount
     
+    if (isLoading)
+        return (
+            <LoadingElement />
+        )
+
     return (
         <>
             <SectionHeader text="Making of" />
             <div className={Styles.makingOf}>
                 <div className={Styles.bannerImg}>
                     <img
-                        src={data && data.imgBanner ? data.imgBanner : notFound}
+                        src={storyData && storyData.imgBanner ? storyData.imgBanner : notFound}
                         alt=""
                     />
                     <div>
                         <div>
-                            <p className={Styles.storyTitle}> {data && data.fairytale}</p>
-                            <p className={Styles.creator}>{data && data.nameStudent}</p>
+                            <p className={Styles.storyTitle}> {storyData && storyData.fairytale}</p>
+                            <p className={Styles.creator}>{storyData && storyData.nameStudent}</p>
                         </div>
                     </div>
                 </div>
@@ -47,10 +62,22 @@ function MakingOf() {
                     </div>
                     <div className={Styles.videoExplainer}>
                         <div>
-                            {data && data.videoExplainer ? data.videoExplainer : "No video explainer available"}
+                            {storyData && storyData.videoExplainer ?
+                                <iframe 
+                                    width="560" 
+                                    height="315" 
+                                    src={storyData.videoExplainer} 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                                </iframe>
+                                : "Geen video beschikbaar"
+                            }
                         </div>
                         <div>
-                            {data && data.description}
+                            {storyData && storyData.description}
                         </div>
                     </div>
                 </div>
@@ -59,9 +86,9 @@ function MakingOf() {
                     <TitleDivider text={"extra beeldmateriaal"} />
                     </div>
                     <div className={Styles.ExtraImage}>
-                        {data &&
-                        data.imgsExtra ?
-                        data.imgsExtra.map((item, index) => (
+                        {storyData &&
+                        storyData.imgsExtra ?
+                        storyData.imgsExtra.map((item, index) => (
                             <img 
                                 key={index}
                                 src={item}
