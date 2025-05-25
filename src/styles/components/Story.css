@@ -7,11 +7,11 @@ section {
   margin: 20rem;
 }
 
-.absolte {
+/* .story .absolte {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
 .story {
     background: black;
@@ -186,4 +186,42 @@ section {
     /* transform: translate(-150%, -10%); */
     height: 400px;
     width: auto;
+}
+
+.story .panel6 .aladin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -20%) scale(-1, 1);
+  height: 300px;
+  width: auto;
+}
+
+.story .panel6 .princess {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -20%);
+  height: 300px;
+  width: auto;
+}
+
+.story .panel6 .oil_lamp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(200%, 350%);
+
+  width: 100px;
+  height: auto;
+}
+
+.story .panel6 .wizard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-150%, -20%); */
+  border-radius: 100px;
+  height: 300px;
+  width: auto;
 }

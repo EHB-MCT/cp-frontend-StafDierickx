@@ -43,6 +43,7 @@ import aladinHold from "@/assets/story/aladinHold.png";
 import aladinFancy from "@/assets/story/aladinFancy.png";
 import princess from "@/assets/story/princess.png";
 import wizard from "@/assets/story/wizard.png";
+import wizardHalf from "@/assets/story/wizard-half.png";
 import quest from "@/assets/story/quest.png";
 
 import bg1 from "@/assets/story/backgrounds/bg1.png";
@@ -232,8 +233,8 @@ function Story() {
           <img src={bg5} alt="" />
           <div className="text">
             <PullUpWords text="A fierce battle." size={44} />
-            <PullUpText text="The sorcerer was furious. Alladin kept the lamp to himself." />
-            <PullUpText text="He used his powerfull magic to try and get the oil lamp back!" />
+            <PullUpText text="The sorcerer was furious. Aladin kept the lamp to himself." />
+            <PullUpText text="He used his powerful magic to try and get the oil lamp back!" />
             <PullUpText text="Aladin put up a great fight and wasn't going to give the lamp back." />
           </div>
           <MotionImg 
@@ -282,7 +283,7 @@ function Story() {
       </section>
       <section className="img-container">
         <ScrollFade>
-        <div className="img-wrapper">
+        <div className="img-wrapper panel6">
           <Paralax offset={0}>
             <img src={desertSky} />
           </Paralax>
@@ -290,8 +291,27 @@ function Story() {
             <img src={desertSun} alt="" />
           </Paralax>
           <img src={desertBg} alt="" />
-          <Paralax offset={-100}>
+          <Paralax offset={-150}>
             <img src={desertHill} alt="" />
+            <img className="oil_lamp" src={oil_lamp} />
+            <img className="aladin" src={aladin} />
+            <img className="princess" src={princess} />
+            <motion.img 
+              className="wizard" 
+              src={wizardHalf}
+              style={{
+                x: "-270%",
+                y: "80%",
+              }}
+              animate={{
+                rotate: [170, 169, 171, 170],
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
           </Paralax>
           <div className="text">
             <PullUpWords text="A happy ending." size={44} />
