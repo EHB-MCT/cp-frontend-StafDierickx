@@ -4,4 +4,4 @@
 
 
 ## sources
-- https://examples.motion.dev/react/parallax
+The sources used can be found in the `sources.md` file.
