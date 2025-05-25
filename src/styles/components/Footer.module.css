@@ -68,3 +68,10 @@ h2 {
     cursor: pointer;
     filter: drop-shadow(3px 4px 0px #E51131);
 }
+.footer a:hover {
+    background-color: #E51131;
+    color: #fff;
+    border: 2px solid #fff;
+    /* transform: translate(-3px -3px); */
+    filter: drop-shadow(0 0 0);
+}

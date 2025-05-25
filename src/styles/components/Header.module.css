@@ -60,6 +60,14 @@
     /* cursor: pointer; */
     filter: drop-shadow(3px 4px 0px);
 }
+.header a:hover {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    /* transform: translate(-3px -3px); */
+    filter: drop-shadow(0 0 0);
+}
+
 .active {
     color: #fff;
     font-size: 1em;
