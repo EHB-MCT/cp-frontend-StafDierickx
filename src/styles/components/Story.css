@@ -2,7 +2,7 @@ html {
   /* scroll-snap-type: y mandatory; */
 }
 
-section {
+section:not(:first-child):not(:last-child) {
   /* scroll-snap-align: start; */
   margin: 20rem;
 }
