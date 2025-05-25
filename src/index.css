@@ -21,6 +21,15 @@ html {
   background-color: #ebf5ec;
 }
 
+body {
+  margin: 0;
+  /* display: flex; */
+  place-items: center;
+  /* min-width: 320px; */
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 h1 {
   font-family: Bungee;
   font-weight: 400;
@@ -31,12 +40,27 @@ h1 {
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    color: black;
+    font-family: "Bungee", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    min-width: 165px;
+    text-align: center;
+    padding: 0.5em 1em;
+    background-color: #ffffff;
+    /* cursor: pointer; */
+    filter: drop-shadow(3px 4px 0px);
 }
 a:hover {
-  color: #535bf2;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    /* transform: translate(-3px -3px); */
+    filter: drop-shadow(0 0 0);
 }
 
 p {
@@ -46,14 +70,6 @@ p {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-}
-
-body {
-  margin: 0;
-  /* display: flex; */
-  place-items: center;
-  /* min-width: 320px; */
-  min-height: 100vh;
 }
 
 .center-body {

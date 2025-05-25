@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 
 import Header from "@/components/ui/Header.jsx";
+import { NavLink } from "react-router";
 
 import LoadingElement from "@/components/ui/LoadingElement.jsx";
 import SectionHeader from "@/components/SectionHeader.jsx";
@@ -49,6 +50,8 @@ function Home({expand = true}) {
             <TileGrid data={storyCards} max='8' />
           </div>  
         }
+        <br />
+        <NavLink to="/sprookjes">Meer sprookjes</NavLink>
     </>
   )
 }
