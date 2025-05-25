@@ -3,6 +3,7 @@
 - https://stackoverflow.com/questions/15765550/darkening-an-image-with-css-in-any-shape
 - https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
 - https://react.dev/reference/react/useEffect
+- https://claude.ai/share/222d8043-4519-4827-b028-98575a8a5a59
 - https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 - https://stackoverflow.com/questions/4013701/select-all-tr-except-the-first-one
 - https://claude.ai/share/f9525850-ad1c-4568-b251-32bf9f30d6cf
