@@ -31,30 +31,32 @@ function Sprookjes() {
   }, [])
   
   useEffect(() => {
-    filterData()
+    filterData(searchTerm)
   }, [searchTerm, storyCards])
   
   const handleSearch = (term) => {
+    console.log(term)
     setSearchTerm(term)
   }
   
-  const filterData = (cards, term) => {
+  // Filter results based on searhc term
+  const filterData = (term) => {
     if (!term) {
       setFilteredStoryCards(storyCards)
       console.log("No search term provided")
       return
     }
+
+    let cards = storyCards
     
-    if (!cards)
-      cards = storyCards
-    
-    cards.filter((data) => {
-      console.log(data)
-      if (data.fairytale.includes(term)) 
+    cards = cards.filter((data) => {
+      // console.log(data)
+      if (data.fairytale.includes(term))
         return true
       if (data.nameStudent.includes(term))
         return true
     })
+    console.log("resutl count:", cards.length)
     setFilteredStoryCards(cards)
   }
 

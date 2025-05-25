@@ -7,6 +7,7 @@ function SearchBar({ expanded = false, onSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
+    // get query from url to load as default
     const urlParams = new URLSearchParams(window.location.search);
     const queryParam = urlParams.get("query");
     if (queryParam) {
@@ -16,9 +17,14 @@ function SearchBar({ expanded = false, onSearch }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (onSearch)
+      onSearch(searchTerm)
+    // console.log("searchterm:", searchTerm)
+  }, [searchTerm])
+
   const onChange = (e) => {
     setSearchTerm(e.target.value);
-    onSearch(searchTerm)
   };
 
   return (
