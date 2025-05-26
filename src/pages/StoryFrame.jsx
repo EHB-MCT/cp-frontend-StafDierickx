@@ -31,7 +31,7 @@ function StoryFrame() {
             .then((data) => {
 
                 const story = data.find(
-                    (sprookje) => sprookje.id == searchParams.get("query")
+                    (sprookje) => sprookje.id == searchParams.get("storyId")
                 );
                 
                 setStoryLink(story.fairytaleLink)

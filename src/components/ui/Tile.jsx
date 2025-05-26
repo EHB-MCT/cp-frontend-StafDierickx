@@ -7,7 +7,7 @@ function Tile({fairytale, nameStudent, id, imgThumbnail}) {
     const handleClick = () => {
         // URLSearchParams automatically handles encoding
         const params = new URLSearchParams();
-        params.set('query', id);
+        params.set('storyId', id);
         navigate(`/story?${params.toString()}`);
     }
 
