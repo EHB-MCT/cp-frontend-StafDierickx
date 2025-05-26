@@ -3,8 +3,6 @@ import { style } from "framer-motion/m";
 
 import Tile from "./Tile"
 
-import img from "@/assets/dummy.jpeg"
-
 function TileGrid({data, max = 0}) {
     const animations = {
         fadeIn: {

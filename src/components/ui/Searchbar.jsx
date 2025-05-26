@@ -9,7 +9,7 @@ function SearchBar({ expanded = false, onSearch }) {
   useEffect(() => {
     // get query from url to load as default
     const urlParams = new URLSearchParams(window.location.search);
-    const queryParam = urlParams.get("query");
+    const queryParam = urlParams.get("storyId");
     if (queryParam) {
       setSearchTerm(queryParam)
       if (onSearch)

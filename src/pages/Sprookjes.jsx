@@ -4,8 +4,6 @@ import TileGrid from "@/components/ui/TileGrid";
 import SearchBar from "@/components/ui/Searchbar";
 import LoadingElement from "@/components/ui/LoadingElement";
 
-// import dummydata from "@/assets/dummy-data.json"
-
 function Sprookjes() {
   const [storyCards, setStoryCards] = useState([])
   const [filteredStoryCards, setFilteredStoryCards] = useState([])
@@ -62,7 +60,10 @@ function Sprookjes() {
 
   if (isLoading) 
     return (
+    <>
       <LoadingElement />
+      <p>Maybe the story doesn't exist anymore...</p>
+    </>
     )
   
   return (

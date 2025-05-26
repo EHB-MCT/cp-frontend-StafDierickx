@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 
-import Header from "@/components/ui/Header.jsx";
 import { NavLink } from "react-router";
 
 import LoadingElement from "@/components/ui/LoadingElement.jsx";
@@ -9,8 +8,6 @@ import TileGrid from "@/components/ui/TileGrid.jsx";
 import { BannerExpandContext } from "@/context/BannerContext.jsx";
 
 import Styles from "@/styles/pages/Home.module.css"
-
-// import dummydata from "@/assets/dummy-data.json"
 
 function Home({expand = true}) {
   const { bannerExpand, setBannerExpand } = useContext(BannerExpandContext)
@@ -42,7 +39,6 @@ function Home({expand = true}) {
 
   return (
     <>
-        {/* <Header expand={true} /> */}
         <br />
         <SectionHeader text="Populair" />
         { !isLoading && 
