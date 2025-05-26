@@ -17,7 +17,7 @@ function App() {
     <>
       <ThemeProvider>
         <BannerProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/cp-frontend-StafDierickx/">
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route index element={<Home />} />
