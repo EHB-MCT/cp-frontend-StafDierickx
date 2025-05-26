@@ -3,7 +3,7 @@ import './App.css'
 
 import { BrowserRouter, Routes, Route} from 'react-router'
 import { ThemeProvider } from './context/ThemeContext.jsx'
-import BannerProvider from './context/BannerContext.jsx'
+import { CurrentStoryContext } from './context/CurrentStoryContext.jsx'
 
 import Layout from './pages/Layout.jsx'
 import Home from './pages/Home.jsx'
@@ -15,7 +15,7 @@ import MakingOf from './pages/MakingOf.jsx'
 function App() {
   return (
     <>
-      <ThemeProvider>
+      <CurrentStoryContext>
         <BannerProvider>
           <BrowserRouter basename="/cp-frontend-StafDierickx/">
             <Routes>
@@ -29,7 +29,7 @@ function App() {
             </Routes>
           </BrowserRouter>
         </BannerProvider>
-      </ThemeProvider>
+      </CurrentStoryContext>
     </>
   )
 }
