@@ -24,7 +24,7 @@ function Header() {
 
   // based on current story, set url params for making-of page
   useEffect(() => {
-    if (!currentStory.id)
+    if (currentStory == undefined)
       return
     
     console.log("banner: changing making-of url to id:", currentStory.id)

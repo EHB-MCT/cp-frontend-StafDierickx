@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext, useState } from "react";
 import SectionHeader from "@/components/SectionHeader"
 import Styles from "@/styles/pages/MakingOf.module.css";
 import LoadingElement from "@/components/ui/LoadingElement.jsx";
 import dummydata from "@/assets/dummy-data.json"
+import { useSearchParams } from "react-router";
 import notFound from "@/assets/img-not-found.png"
+
+import { CurrentStoryContext } from "@/context/CurrentStoryContext.jsx";
 
 const TitleDivider = ({text}) => {
     return (
@@ -17,23 +20,44 @@ const TitleDivider = ({text}) => {
 function MakingOf() {
     const [storyData, setStoryData] = useState(null);
     const [isLoading, setIsLoading] = useState(true)
-    
+    const { currentStory, setCurrentStory} = useContext(CurrentStoryContext)
+    const [searchParams] = useSearchParams();
+
+    // load correct story information
     useEffect(() => {
-        // fetch json array from api
+        setIsLoading(true)
+        const storyId = searchParams.get("storyId")
+        if (storyId !== undefined) {
+            console.log(storyId)
+            if (currentStory != undefined && currentStory.id == storyId) {
+                console.log("story data found")
+                setStoryData(currentStory)
+                setIsLoading(false)
+            }
+            else
+                // if not found, fetch it by id
+                fetchStory(storyId)
+
+        }
+    }, [])
+
+    function fetchStory(storyId) {
+        setIsLoading(true)
         console.log("Fetching sprookjes data...")
         fetch("https://raw.githubusercontent.com/EHB-MCT/cp-frontend-MaximWesterbeek/refs/heads/main/course-project/public/api/fairytaleList.json")
           .then(response => response.json())
           .then(data => {
             console.log("Data fetched:", data)
 
-            const storydata = dummydata.find(story => story.id === "staf-dierickx-aladin-en-de-wonderlamp")
+            const storydata = dummydata.find(story => story.id === storyId)
             console.log("Story data:", storydata)
 
+            setCurrentStory(storyData)
             setStoryData(storydata)
             setIsLoading(false)
           })
           .catch(error => console.error(error))
-    }, []); // Empty dependency array means this effect runs once on mount
+    }
     
     if (isLoading)
         return (
