@@ -5,14 +5,10 @@ import { NavLink } from "react-router";
 import LoadingElement from "@/components/ui/LoadingElement.jsx";
 import SectionHeader from "@/components/SectionHeader.jsx";
 import TileGrid from "@/components/ui/TileGrid.jsx";
-import { BannerExpandContext } from "@/context/BannerContext.jsx";
 
 import Styles from "@/styles/pages/Home.module.css"
 
 function Home({expand = true}) {
-  const { bannerExpand, setBannerExpand } = useContext(BannerExpandContext)
-  setBannerExpand(true)
-
   let [storyCards, setStoryCards] = useState()
   const [isLoading, setIsLoading] = useState(true)
   

@@ -3,7 +3,9 @@ import { useState, createContext } from "react";
 
 export const CurrentStoryContext = createContext();
 
-export function StoryProvider({ children }) {
+// a context provided for passing the current story info around.
+// should be reduce the amount of api calls
+export function CurrentStoryProvider({ children }) {
     const [currentStory, setCurrentStory] = useState();
 
     return (
@@ -13,4 +15,4 @@ export function StoryProvider({ children }) {
     )
 } 
 
-export default StoryProvider;
+export default CurrentStoryProvider;

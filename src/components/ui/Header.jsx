@@ -1,17 +1,19 @@
-import React, { useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { NavLink, useLocation } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { useSearchParams } from "react-router";
 
 import styles from "@/styles/components/Header.module.css";
 import logo from "@/assets/logo.svg";
 
 import SearchBar from "./Searchbar.jsx";
-import { BannerExpandContext } from "@/context/BannerContext.jsx";
+import { CurrentStoryContext } from "@/context/CurrentStoryContext.jsx";
 
 function Header() {
   const location = useLocation();
-  const { bannerExpand, setBannerExpand } = useContext(BannerExpandContext);
+  const { currentStory, setCurrentStory} = useContext(CurrentStoryContext)
+  const [ bannerExpand, setBannerExpand ] = useState(false);
+  const [ makingOfParam, setMakingOfParam] = useState()
   
   // Effect to update banner state based on current route
   useEffect(() => {
@@ -19,6 +21,18 @@ function Header() {
     const shouldExpandBanner = location.pathname === "/";
     setBannerExpand(shouldExpandBanner);
   }, [location.pathname, setBannerExpand]);
+
+  // based on current story, set url params for making-of page
+  useEffect(() => {
+    if (!currentStory.id)
+      return
+    
+    console.log("banner: changing making-of url to id:", currentStory.id)
+    const params = new URLSearchParams();
+    params.set('storyId', currentStory.id)
+    setMakingOfParam(params.toString())
+
+  }, [currentStory])
 
   const navigationVariants = {
     expanded: {
@@ -61,7 +75,7 @@ function Header() {
           <div className={styles.navigationLinks}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/sprookjes">Sprookjes</NavLink>
-            <NavLink to="/making-of">Making-of</NavLink>
+            <NavLink to={`/making-of?${makingOfParam}`}>Making-of</NavLink>
           </div>
         </div>
         <AnimatePresence mode="wait">

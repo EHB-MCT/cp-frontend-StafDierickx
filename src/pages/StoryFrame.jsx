@@ -1,13 +1,15 @@
 // This page is for viewing stories of other students
 // Could not come up with a better name
-import { useState, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useSearchParams } from "react-router";
+import { CurrentStoryContext } from "@/context/CurrentStoryContext.jsx";
 
 import LoadingElement from "@/components/ui/LoadingElement.jsx";
 
 function StoryFrame() {
     const [isLoading, setIsLoading] = useState(true);
     const [storyLink, setStoryLink] = useState("");
+    const { currentStory, setCurrentStory} = useContext(CurrentStoryContext)
 
     const style = {
         iframe: {
@@ -34,6 +36,8 @@ function StoryFrame() {
                     (sprookje) => sprookje.id == searchParams.get("storyId")
                 );
                 
+                // set useStates
+                setCurrentStory(story)
                 setStoryLink(story.fairytaleLink)
                 setIsLoading(false);
             })

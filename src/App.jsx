@@ -3,7 +3,7 @@ import './App.css'
 
 import { BrowserRouter, Routes, Route} from 'react-router'
 import { ThemeProvider } from './context/ThemeContext.jsx'
-import { CurrentStoryContext } from './context/CurrentStoryContext.jsx'
+import { CurrentStoryProvider } from './context/CurrentStoryContext.jsx'
 
 import Layout from './pages/Layout.jsx'
 import Home from './pages/Home.jsx'
@@ -15,8 +15,8 @@ import MakingOf from './pages/MakingOf.jsx'
 function App() {
   return (
     <>
-      <CurrentStoryContext>
-        <BannerProvider>
+      <ThemeProvider>
+        <CurrentStoryProvider>
           <BrowserRouter basename="/cp-frontend-StafDierickx/">
             <Routes>
               <Route path='/' element={<Layout />}>
@@ -28,8 +28,8 @@ function App() {
               <Route path="paralax" element={<ParalaxPage />} />
             </Routes>
           </BrowserRouter>
-        </BannerProvider>
-      </CurrentStoryContext>
+        </CurrentStoryProvider>
+      </ThemeProvider>
     </>
   )
 }
